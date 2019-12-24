@@ -26,7 +26,7 @@
 - 使用@Value("${xxx}")注解引入在配置文件中编写的单个属性。
 - 使用@ConfigurationProperties(prefix="aaa") + @Component 注解引入aaa下的所有属性。例：
 
-```yml
+```properties
 limit: 
 	minMoney: 1
 	maxMoney: 999
@@ -140,13 +140,12 @@ public class HttpAspect {
       private MockMvc mvc;
   
       @Test
-      void listLuckymoney() throws Exception {
-          mvc.perform(MockMvcRequestBuilders.get("/list"))        .andExpect(MockMvcResultMatchers.status().isOk());
+      void listLuckymoney() throws Exception {   mvc.perform(MockMvcRequestBuilders.get("/list")).andExpect(MockMvcResultMatchers.status().isOk());
       }
   }
   ```
-
   
+
 
 
 
